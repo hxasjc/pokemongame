@@ -1,7 +1,7 @@
 package hxasjc.pokemongame;
 
 import hxasjc.pokemongame.components.HealthBar;
-import hxasjc.pokemongame.components.QuadSelectionArea;
+import hxasjc.pokemongame.components.QuadSelectionPane;
 import javafx.fxml.FXML;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
@@ -26,7 +26,7 @@ public class PokemonBattle {
     HealthBar playerHealth;
     HealthBar opponentHealth;
 
-    QuadSelectionArea selectionArea;
+    QuadSelectionPane selectionArea;
 
     public void init() {
         placeGradient();
@@ -44,7 +44,7 @@ public class PokemonBattle {
         opponentHealth.setVisible(true);
         opponentHealth.toFront();
 
-        selectionArea = new QuadSelectionArea(655, 435);
+        selectionArea = new QuadSelectionPane(655, 435);
         background.getChildren().add(selectionArea);
         selectionArea.setVisible(true);
         selectionArea.toFront();

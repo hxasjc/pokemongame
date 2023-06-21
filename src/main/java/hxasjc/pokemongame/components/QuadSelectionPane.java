@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.Map;
 
-public class QuadSelectionArea extends AnchorPane {
+public class QuadSelectionPane extends AnchorPane {
     private static final Map<SelectedCorner, Coordinate> ARROW_POSITION_MAP = Map.ofEntries(
             Map.entry(SelectedCorner.TOP_LEFT, new Coordinate(0, 27))
     );
@@ -41,13 +41,13 @@ public class QuadSelectionArea extends AnchorPane {
     @FXML
     private ImageView arrow;
 
-    public QuadSelectionArea(double x, double y) {
+    public QuadSelectionPane(double x, double y) {
         this.x = x;
         this.y = y;
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("quad-selection.fxml"));
         loader.setRoot(this);
-        loader.setController(QuadSelectionArea.this);
+        loader.setController(QuadSelectionPane.this);
 
         try {
             loader.load();
