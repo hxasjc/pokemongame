@@ -3,12 +3,14 @@ package hxasjc.pokemongame;
 import hxasjc.pokemongame.components.HealthBar;
 import hxasjc.pokemongame.components.QuadSelectionPane;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.Rectangle;
 
-public class PokemonBattle {
+public class PokemonBattle implements IKeyInputHandler {
     private static final int GRADIENT_COUNT = 60;
     private final Rectangle[] gradientRects = new Rectangle[GRADIENT_COUNT];
 
@@ -21,7 +23,11 @@ public class PokemonBattle {
     @FXML
     public Ellipse opponentBase;
 
-    @FXML Ellipse playerBase;
+    @FXML
+    public Ellipse playerBase;
+
+    @FXML
+    public Label textArea;
 
     HealthBar playerHealth;
     HealthBar opponentHealth;
@@ -49,6 +55,7 @@ public class PokemonBattle {
         selectionArea.setVisible(true);
         selectionArea.toFront();
         selectionArea.applyText(new String[]{"Fight", "Swap", "Heal", "Revive"});
+        selectionArea.setActive(true);
     }
 
     private void placeGradient() {
@@ -91,5 +98,10 @@ public class PokemonBattle {
             rectangle.setVisible(true);
             gradientRects[i] = rectangle;
         }
+    }
+
+    @Override
+    public void acceptEvent(KeyEvent event) {
+        selectionArea.acceptEvent(event);
     }
 }

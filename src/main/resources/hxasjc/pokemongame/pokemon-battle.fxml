@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Ellipse?>
 <?import javafx.scene.shape.Rectangle?>
@@ -17,10 +17,10 @@
       <Rectangle fill="#969696" height="20.0" layoutX="10.0" layoutY="10.0" stroke="#969696" strokeType="INSIDE" strokeWidth="0.0" width="380.0" x="70.0" y="100.0" />
       <Rectangle fill="WHITE" height="160.0" stroke="#969696" strokeType="OUTSIDE" strokeWidth="5.0" width="640.0" x="5.0" y="435.0" />
       <Rectangle fill="WHITE" height="160.0" stroke="#969696" strokeType="OUTSIDE" strokeWidth="5.0" width="350.0" x="655.0" y="435.0" />
-      <TextArea fx:id="textArea" editable="false" layoutX="5.0" layoutY="435.0" prefHeight="160.0" prefWidth="640.0" wrapText="true">
+      <Label fx:id="textArea" alignment="TOP_LEFT" layoutX="5.0" layoutY="435.0" prefHeight="160.0" prefWidth="640.0" text="Label">
          <font>
             <Font name="Times New Roman" size="21.0" />
          </font>
-      </TextArea>
+      </Label>
    </children>
 </AnchorPane>

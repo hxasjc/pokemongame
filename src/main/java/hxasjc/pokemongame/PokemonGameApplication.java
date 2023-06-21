@@ -3,6 +3,7 @@ package hxasjc.pokemongame;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 
 public class PokemonGameApplication extends Application {
@@ -18,5 +19,7 @@ public class PokemonGameApplication extends Application {
         primaryStage.show();
 
         controller.init();
+
+        scene.addEventHandler(KeyEvent.ANY, controller::acceptEvent);
     }
 }
